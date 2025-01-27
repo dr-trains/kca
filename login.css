@@ -1,0 +1,144 @@
+/* RESET STYLES */
+:root {
+  --body-bg-color: #f0b444;
+  --form-submit-text-color: #fff;
+  --form-submit-bg-color: #589fa8;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-weight: normal;
+}
+
+button {
+  cursor: pointer;
+}
+
+button,
+input {
+  font-family: inherit;
+  font-size: 100%;
+  border: none;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  font: clamp(16px, 2.5vw, 24px) / 1.2 "Exo 2", sans-serif;
+  background: var(--body-bg-color);
+}
+
+/* MAIN STYLES */
+.grid {
+  width: 100%;
+  margin: auto;
+  padding: 20px;
+}
+
+.grid .left {
+  max-width: 90%;
+  width: 600px;
+  margin: 20px auto 0;
+}
+
+.logo {
+  
+  width: 100%;
+  height: auto;
+  margin-bottom: 30px;
+}
+
+.grid .left .title {
+  font-size: 1.5em;
+  font-weight: 600;
+  margin-bottom: 40px;
+  text-wrap: nowrap;
+  text-align: center;
+  color: #EB720F;
+}
+
+
+
+.grid .left form {
+  position: relative;
+}
+
+.grid .left input,
+.grid .left button {
+  width: 100%;
+  padding: 15px;
+}
+
+.grid .left button {
+  color: var(--form-submit-text-color);
+  background: var(--form-submit-bg-color);
+}
+
+/* LOTTIE PLAYERS STYLES */
+.arrow {
+  position: absolute;
+  right: 0;
+  top: 100%;
+}
+
+.under-construction {
+  width: 300px;
+  height: 300px;
+  margin: 20px auto 0;
+}
+
+/* MQ STYLES */
+@media (min-width: 768px) {
+  .under-construction {
+      width: 500px;
+      height: 500px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+  }
+
+  .grid .left {
+      padding-left: 20%;
+      margin: 0;
+  }
+
+  .grid .left {
+      width: auto;
+  }
+
+  .under-construction {
+      margin: 0 auto;
+  }
+}
+
+@media (min-width: 1500px) {
+  .grid .left {
+      max-width: 80%;
+  }
+
+  .grid .left input {
+      border-radius: 30px;
+  }
+
+  .grid .left button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: auto;
+  }
+}
+
+@media (min-width: 1500px) and (min-height: 900px) {
+  .under-construction {
+      width: 700px;
+      height: 700px;
+  }
+}
